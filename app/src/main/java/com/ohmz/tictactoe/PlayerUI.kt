@@ -23,14 +23,14 @@ fun Cross() {
     ) {
         drawLine(
             color = Green,
-            strokeWidth = 10f,
+            strokeWidth = 25f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = 0f),
             end = Offset(x = size.width, y = size.height)
         )
         drawLine(
             color = Green,
-            strokeWidth = 10f,
+            strokeWidth = 25f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width, y = 0f),
             end = Offset(x = 0f, y = size.height)
@@ -47,7 +47,7 @@ fun Circle() {
     ) {
         drawCircle(
             color = Aqua,
-            style = Stroke(width = 10f)
+            style = Stroke(width = 25f)
         )
     }
 

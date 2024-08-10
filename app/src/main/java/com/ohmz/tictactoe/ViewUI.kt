@@ -1,7 +1,11 @@
 package com.ohmz.tictactoe
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.scaleIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,6 +14,8 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -30,6 +36,7 @@ import com.ohmz.tictactoe.ui.theme.GrayBackground
 import com.ohmz.tictactoe.ui.theme.LightGray
 import com.ohmz.tictactoe.ui.theme.Red
 
+@OptIn(ExperimentalUnsignedTypes::class)
 @Composable
 fun TicTacToeGame(viewModel: GameViewModel) {
 
@@ -48,9 +55,9 @@ fun TicTacToeGame(viewModel: GameViewModel) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(text = "Player '0': 0", fontSize = 16.sp, color = Blue)
-            Text(text = "Draw : 0", fontSize = 16.sp, color = Blue)
-            Text(text = "Player 'X': 0", fontSize = 16.sp, color = Blue)
+            Text(text = "Player '0': ${state.playerCircleCount}", fontSize = 20.sp, color = Blue)
+            Text(text = "Draw : ${state.drawCount}", fontSize = 20.sp, color = Blue)
+            Text(text = "Player 'X': ${state.playerCrossCount}", fontSize = 20.sp, color = Blue)
         }
 
         Text(
@@ -71,24 +78,94 @@ fun TicTacToeGame(viewModel: GameViewModel) {
             contentAlignment = Alignment.Center
         ) {
             Grid()
+            LazyVerticalGrid(
+                modifier = Modifier
+                    .fillMaxWidth(0.8f)
+                    .aspectRatio(1f), columns = GridCells.Fixed(3)
+            ) {
+                viewModel.boardCellValue.forEach { (cellNo, boardCellValue) ->
+                    item {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .aspectRatio(1f)
+                                .clickable(
+                                    interactionSource = MutableInteractionSource(),
+                                    indication = null
+                                ) {
+                                    viewModel.onAction(
+                                        UserAction.TurnPlayed(cellNo)
+                                    )
+                                },
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            AnimatedVisibility(
+                                visible = viewModel.boardCellValue[cellNo] != BoardCellValue.NONE,
+                                enter = scaleIn(tween(durationMillis = 500))
+                            ) {
+                                when (boardCellValue) {
+                                    BoardCellValue.CIRCLE -> {
+                                        Circle()
+                                    }
+
+                                    BoardCellValue.CROSS -> Cross()
+                                    else -> Unit
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(1f),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                AnimatedVisibility(
+                    visible = state.hasWon, enter = scaleIn(tween(durationMillis = 500))
+                ) {
+                    DrawVictoryLine(state = state)
+                }
+            }
         }
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            Text(text = "Player '0' turn", fontSize = 16.sp, modifier = Modifier.clickable {})
+            Text(text = state.hintText, fontSize = 25.sp, modifier = Modifier.clickable {})
             Button(
-                onClick = { /*TODO*/ },
+                onClick = { viewModel.onAction(UserAction.PlayAgainButtonClicked) },
                 shape = RoundedCornerShape(5.dp),
                 elevation = ButtonDefaults.elevatedButtonElevation(5.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Red, contentColor = Color.White
                 )
             ) {
-                Text(text = "Play Again", fontSize = 16.sp)
+                Text(text = "Play Again", fontSize = 25.sp)
             }
         }
+    }
+}
+
+@Composable
+fun DrawVictoryLine(state: GameState) {
+    when (state.victoryType) {
+        VictoryType.HORIZONTAL1 -> WinHorizontalLine1()
+        VictoryType.HORIZONTAL2 -> WinHorizontalLine2()
+        VictoryType.HORIZONTAL3 -> WinHorizontalLine3()
+
+        VictoryType.VERTICAL1 -> WinVerticalLine1()
+        VictoryType.VERTICAL2 -> WinVerticalLine2()
+        VictoryType.VERTICAL3 -> WinVerticalLine3()
+
+        VictoryType.DIAGONAL1 -> WinDiagonalLine1()
+        VictoryType.DIAGONAL2 -> WinDiagonalLine2()
+        else -> Unit
+
     }
 }
 
@@ -96,5 +173,4 @@ fun TicTacToeGame(viewModel: GameViewModel) {
 @Composable
 fun DefaultPreview() {
     TicTacToeGame(viewModel = GameViewModel())
-
 }
