@@ -1,5 +1,6 @@
 package com.ohmz.tictactoe
 
+import androidx.annotation.FloatRange
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.padding
@@ -64,27 +65,10 @@ fun WinHorizontalLine1() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height / 6),
             end = Offset(x = size.width, y = size.height / 6)
-        )
-    }
-}
-
-@Composable
-fun WinHorizontalLine2() {
-    Canvas(
-        modifier = Modifier
-            .size(300.dp)
-            .padding(10.dp)
-    ) {
-        drawLine(
-            color = Red,
-            strokeWidth = 10f,
-            cap = StrokeCap.Round,
-            start = Offset(x = 0f, y = size.height * 5 / 6),
-            end = Offset(x = size.width, y = size.height * 5 / 6)
         )
     }
 }
@@ -98,7 +82,24 @@ fun WinHorizontalLine3() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
+            cap = StrokeCap.Round,
+            start = Offset(x = 0f, y = size.height * 5 / 6),
+            end = Offset(x = size.width, y = size.height * 5 / 6)
+        )
+    }
+}
+
+@Composable
+fun WinHorizontalLine2() {
+    Canvas(
+        modifier = Modifier
+            .size(300.dp)
+            .padding(10.dp)
+    ) {
+        drawLine(
+            color = Red,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f, y = size.height / 2),
             end = Offset(x = size.width, y = size.height / 2)
@@ -115,7 +116,7 @@ fun WinVerticalLine1() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width / 6, y = 0f),
             end = Offset(x = size.width / 6, y = size.height)
@@ -132,7 +133,7 @@ fun WinVerticalLine2() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width / 2, y = 0f),
             end = Offset(x = size.width / 2, y = size.height)
@@ -149,7 +150,7 @@ fun WinVerticalLine3() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width * 5 / 6, y = 0f),
             end = Offset(x = size.width * 5 / 6, y = size.height)
@@ -165,7 +166,7 @@ fun WinDiagonalLine1() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = 0f / 6, y = 0f),
             end = Offset(x = size.width, y = size.height)
@@ -181,7 +182,7 @@ fun WinDiagonalLine2() {
     ) {
         drawLine(
             color = Red,
-            strokeWidth = 10f,
+            strokeWidth = 20f,
             cap = StrokeCap.Round,
             start = Offset(x = size.width , y = 0f),
             end = Offset(x = 0f, y = size.height)
