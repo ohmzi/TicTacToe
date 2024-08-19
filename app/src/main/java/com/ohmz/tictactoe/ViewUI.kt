@@ -168,7 +168,7 @@ fun TicTacToeGame(viewModel: GameViewModel, viewModelC: ConfettiViewModel) {
                     containerColor = Red, contentColor = Color.White
                 )
             ) {
-                Text(text = "Play Again", fontSize = 25.sp)
+                Text(text = "Play Again", fontSize = 20.sp)
             }
         }
     }
