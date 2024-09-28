@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ohmz.tictactoe.ui.theme.TicTacToeTheme
-import nl.dionsegijn.xml.compose.ConfettiViewModel
 
 class MainActivity : ComponentActivity() {
     private val viewModelC by viewModels<ConfettiViewModel>()

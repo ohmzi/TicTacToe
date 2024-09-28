@@ -1,12 +1,12 @@
-package nl.dionsegijn.konfetti.core
+package com.ohmz.tictactoe.core
 
-import nl.dionsegijn.konfetti.core.Angle.Companion.BOTTOM
-import nl.dionsegijn.konfetti.core.Angle.Companion.LEFT
-import nl.dionsegijn.konfetti.core.Angle.Companion.RIGHT
-import nl.dionsegijn.konfetti.core.Angle.Companion.TOP
-import nl.dionsegijn.konfetti.core.emitter.EmitterConfig
-import nl.dionsegijn.konfetti.core.models.Shape
-import nl.dionsegijn.konfetti.core.models.Size
+import com.ohmz.tictactoe.core.Angle.Companion.BOTTOM
+import com.ohmz.tictactoe.core.Angle.Companion.LEFT
+import com.ohmz.tictactoe.core.Angle.Companion.RIGHT
+import com.ohmz.tictactoe.core.Angle.Companion.TOP
+import com.ohmz.tictactoe.core.emitter.EmitterConfig
+import com.ohmz.tictactoe.core.models.Shape
+import com.ohmz.tictactoe.core.models.Size
 
 /**
  * Configuration how to confetti should be rendered

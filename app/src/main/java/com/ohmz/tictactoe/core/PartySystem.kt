@@ -1,9 +1,9 @@
-package nl.dionsegijn.konfetti.core
+package com.ohmz.tictactoe.core
 
-import nl.dionsegijn.konfetti.core.emitter.BaseEmitter
-import nl.dionsegijn.konfetti.core.emitter.Confetti
-import nl.dionsegijn.konfetti.core.emitter.PartyEmitter
-import nl.dionsegijn.konfetti.core.models.CoreRect
+import com.ohmz.tictactoe.core.emitter.BaseEmitter
+import com.ohmz.tictactoe.core.emitter.Confetti
+import com.ohmz.tictactoe.core.emitter.PartyEmitter
+import com.ohmz.tictactoe.core.models.CoreRect
 
 /**
  * PartySystem is responsible for requesting particles from the emitter and updating the particles

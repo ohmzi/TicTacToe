@@ -1,14 +1,8 @@
 package com.ohmz.tictactoe.core
 
-import android.graphics.drawable.Drawable
-import nl.dionsegijn.konfetti.core.Angle
-import nl.dionsegijn.konfetti.core.Party
-import nl.dionsegijn.konfetti.core.Position
-import nl.dionsegijn.konfetti.core.Rotation
-import nl.dionsegijn.konfetti.core.Spread
-import nl.dionsegijn.konfetti.core.emitter.Emitter
-import nl.dionsegijn.konfetti.core.models.Shape
-import nl.dionsegijn.konfetti.core.models.Size
+import com.ohmz.tictactoe.core.emitter.Emitter
+import com.ohmz.tictactoe.core.models.Shape
+import com.ohmz.tictactoe.core.models.Size
 import java.util.concurrent.TimeUnit
 
 class Presets {

@@ -1,11 +1,11 @@
-package nl.dionsegijn.xml.compose
+package com.ohmz.tictactoe
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ohmz.tictactoe.core.Presets
-import nl.dionsegijn.konfetti.core.Party
-import nl.dionsegijn.konfetti.core.models.Shape
+import com.ohmz.tictactoe.core.Party
+import com.ohmz.tictactoe.core.models.Shape
 
 class ConfettiViewModel : ViewModel() {
     private val _state = MutableLiveData<State>(State.Idle)

@@ -1,6 +1,6 @@
-package nl.dionsegijn.konfetti.core
+package com.ohmz.tictactoe.core
 
-import nl.dionsegijn.konfetti.core.models.Shape
+import com.ohmz.tictactoe.core.models.Shape
 
 /**
  * Particle holding exact data to instruct where and how to draw a particle

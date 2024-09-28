@@ -1,4 +1,4 @@
-package nl.dionsegijn.konfetti.core.models
+package com.ohmz.tictactoe.core.models
 
 sealed interface Shape {
     object Circle : Shape {

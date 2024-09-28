@@ -1,8 +1,8 @@
-package nl.dionsegijn.konfetti.core.emitter
+package com.ohmz.tictactoe.core.emitter
 
-import nl.dionsegijn.konfetti.core.models.CoreRect
-import nl.dionsegijn.konfetti.core.models.Shape
-import nl.dionsegijn.konfetti.core.models.Vector
+import com.ohmz.tictactoe.core.models.CoreRect
+import com.ohmz.tictactoe.core.models.Shape
+import com.ohmz.tictactoe.core.models.Vector
 import kotlin.math.abs
 
 /**

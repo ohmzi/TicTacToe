@@ -1,6 +1,6 @@
-package nl.dionsegijn.konfetti.compose
+package com.ohmz.tictactoe.compose
 
-import nl.dionsegijn.konfetti.core.PartySystem
+import com.ohmz.tictactoe.core.PartySystem
 
 interface OnParticleSystemUpdateListener {
     fun onParticleSystemEnded(

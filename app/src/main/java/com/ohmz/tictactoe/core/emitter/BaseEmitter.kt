@@ -1,7 +1,7 @@
-package nl.dionsegijn.konfetti.core.emitter
+package com.ohmz.tictactoe.core.emitter
 
-import nl.dionsegijn.konfetti.core.Party
-import nl.dionsegijn.konfetti.core.models.CoreRect
+import com.ohmz.tictactoe.core.Party
+import com.ohmz.tictactoe.core.models.CoreRect
 
 /**
  * An abstract class for creating a custom emitter

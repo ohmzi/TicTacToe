@@ -1,8 +1,8 @@
-package nl.dionsegijn.konfetti.core
+package com.ohmz.tictactoe.core
 
-import nl.dionsegijn.konfetti.core.emitter.EmitterConfig
-import nl.dionsegijn.konfetti.core.models.Shape
-import nl.dionsegijn.konfetti.core.models.Size
+import com.ohmz.tictactoe.core.emitter.EmitterConfig
+import com.ohmz.tictactoe.core.models.Shape
+import com.ohmz.tictactoe.core.models.Size
 
 /**
  * Factory class to enable builder methods for Java implementations

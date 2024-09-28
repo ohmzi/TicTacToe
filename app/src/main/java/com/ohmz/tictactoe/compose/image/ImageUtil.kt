@@ -1,7 +1,8 @@
-package nl.dionsegijn.konfetti.xml.image
+package com.ohmz.tictactoe.compose.image
 
 import android.graphics.drawable.Drawable
-import nl.dionsegijn.konfetti.core.models.Shape
+import com.ohmz.tictactoe.core.models.Shape
+import nl.dionsegijn.konfetti.xml.image.DrawableImage
 
 object ImageUtil {
     @JvmStatic

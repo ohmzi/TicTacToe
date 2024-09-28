@@ -1,4 +1,4 @@
-package nl.dionsegijn.konfetti.core.models
+package com.ohmz.tictactoe.core.models
 
 data class Vector(var x: Float = 0f, var y: Float = 0f) {
     fun add(v: Vector) {

@@ -1,4 +1,4 @@
-package nl.dionsegijn.konfetti.compose
+package com.ohmz.tictactoe.compose
 
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
@@ -12,14 +12,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.layout.onGloballyPositioned
-import nl.dionsegijn.konfetti.core.Particle
-import nl.dionsegijn.konfetti.core.Party
-import nl.dionsegijn.konfetti.core.PartySystem
-import nl.dionsegijn.konfetti.core.models.CoreRectImpl
-import nl.dionsegijn.konfetti.core.models.ReferenceImage
-import nl.dionsegijn.konfetti.core.models.Shape
+import com.ohmz.tictactoe.core.Particle
+import com.ohmz.tictactoe.core.Party
+import com.ohmz.tictactoe.core.PartySystem
+import com.ohmz.tictactoe.core.models.CoreRectImpl
+import com.ohmz.tictactoe.core.models.ReferenceImage
+import com.ohmz.tictactoe.core.models.Shape
 import nl.dionsegijn.konfetti.xml.image.DrawableImage
-import nl.dionsegijn.konfetti.xml.image.ImageStore
+import com.ohmz.tictactoe.compose.image.ImageStore
 
 @Composable
 fun KonfettiView(

@@ -1,7 +1,7 @@
 package nl.dionsegijn.konfetti.xml.image
 
 import android.graphics.drawable.Drawable
-import nl.dionsegijn.konfetti.core.models.CoreImage
+import com.ohmz.tictactoe.core.models.CoreImage
 
 data class DrawableImage(
     val drawable: Drawable,

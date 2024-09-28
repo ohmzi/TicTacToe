@@ -1,4 +1,4 @@
-package nl.dionsegijn.konfetti.compose
+package com.ohmz.tictactoe.compose
 
 import android.graphics.BlendMode
 import android.graphics.BlendModeColorFilter
@@ -11,14 +11,14 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
-import nl.dionsegijn.konfetti.core.Particle
-import nl.dionsegijn.konfetti.core.models.ReferenceImage
-import nl.dionsegijn.konfetti.core.models.Shape
-import nl.dionsegijn.konfetti.core.models.Shape.Circle
-import nl.dionsegijn.konfetti.core.models.Shape.DrawableShape
-import nl.dionsegijn.konfetti.core.models.Shape.Rectangle
-import nl.dionsegijn.konfetti.core.models.Shape.Square
-import nl.dionsegijn.konfetti.xml.image.ImageStore
+import com.ohmz.tictactoe.core.Particle
+import com.ohmz.tictactoe.core.models.ReferenceImage
+import com.ohmz.tictactoe.core.models.Shape
+import com.ohmz.tictactoe.core.models.Shape.Circle
+import com.ohmz.tictactoe.core.models.Shape.DrawableShape
+import com.ohmz.tictactoe.core.models.Shape.Rectangle
+import com.ohmz.tictactoe.core.models.Shape.Square
+import com.ohmz.tictactoe.compose.image.ImageStore
 
 /**
  * Draw a shape to `compose canvas`. Implementations are expected to draw within a square of size

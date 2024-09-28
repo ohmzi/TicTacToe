@@ -1,4 +1,4 @@
-package nl.dionsegijn.konfetti.core.emitter
+package com.ohmz.tictactoe.core.emitter
 
 import java.util.concurrent.TimeUnit
 

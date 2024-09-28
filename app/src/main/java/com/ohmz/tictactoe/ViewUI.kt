@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -40,10 +39,9 @@ import com.ohmz.tictactoe.ui.theme.Blue
 import com.ohmz.tictactoe.ui.theme.GrayBackground
 import com.ohmz.tictactoe.ui.theme.LightGray
 import com.ohmz.tictactoe.ui.theme.Red
-import nl.dionsegijn.konfetti.compose.KonfettiView
-import nl.dionsegijn.konfetti.compose.OnParticleSystemUpdateListener
-import nl.dionsegijn.konfetti.core.PartySystem
-import nl.dionsegijn.xml.compose.ConfettiViewModel
+import com.ohmz.tictactoe.compose.KonfettiView
+import com.ohmz.tictactoe.compose.OnParticleSystemUpdateListener
+import com.ohmz.tictactoe.core.PartySystem
 
 @OptIn(ExperimentalUnsignedTypes::class)
 @Composable
